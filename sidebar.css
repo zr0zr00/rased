@@ -1,0 +1,143 @@
+/* Sidebar Styles */
+.sidebar {
+    /* Tombstone: Previous sidebar styles moved here */
+    width: 280px;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+/* Additional sidebar-specific styles */
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px rgba(91, 173, 255, 0.6));
+}
+
+.system-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(91, 173, 255, 0.4);
+}
+
+.system-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-item {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-secondary);
+}
+
+.menu-item:hover {
+    background-color: rgba(91, 173, 255, 0.1);
+    color: var(--text-color);
+}
+
+.menu-item.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.menu-item i {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+    margin-left: 0.5rem;
+    position: relative;
+}
+
+.status-dot::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+        padding: 1rem;
+    }
+    
+    .system-name, .system-desc, .menu-item span, .status span {
+        display: none;
+    }
+    
+    .logo {
+        width: 60px;
+    }
+    
+    .menu-item {
+        justify-content: center;
+    }
+    
+    .menu-item i {
+        margin: 0;
+    }
+}

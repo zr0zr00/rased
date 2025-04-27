@@ -1,0 +1,13 @@
+/* Responsive Design Styles */
+@media (max-width: 1200px) {
+    /* Tombstone: Previous media query styles moved here */
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .monitoring-modules {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Additional responsive styles */

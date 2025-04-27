@@ -1,0 +1,31 @@
+/* Global Styles and Root Variables */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+:root {
+    /* Tombstone: Previous color variables moved here */
+    --primary-color: #0a1929;
+    --secondary-color: #132f4c;
+    --accent-color: #5badff;
+    --accent-dark: #0f65bd;
+    --text-color: #e6f1ff;
+    --text-secondary: #9eb7d0;
+    --surface-color: #183654;
+    --danger-color: #ff4d6e;
+    --success-color: #56ca81;
+    --warning-color: #ffb547;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Tombstone: Moved specific component styles to separate files */
